@@ -95,6 +95,8 @@ class Idea extends Model
 
 
     /* 
+    This don't need to be used
+    
     public function getStatusClasses()
     {
 
