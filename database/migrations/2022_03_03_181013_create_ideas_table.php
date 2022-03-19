@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateIdeasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->nullable();
             $table->text('description');
+            $table->integer('spam_reports')->default(0);
             $table->timestamps();
         });
     }
@@ -34,4 +35,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('ideas');
     }
-};
+}
