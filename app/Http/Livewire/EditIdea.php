@@ -30,7 +30,6 @@ class EditIdea extends Component
 
     public function updateIdea()
     {
-        // Authorization
         if (auth()->guest() || auth()->user()->cannot('update', $this->idea)) {
             abort(Response::HTTP_FORBIDDEN);
         }
@@ -43,7 +42,7 @@ class EditIdea extends Component
             'description' => $this->description,
         ]);
 
-        $this->emit('ideaWasUpdated');
+        $this->emit('ideaWasUpdated', 'Idea was updated successfully!');
     }
 
     public function render()
