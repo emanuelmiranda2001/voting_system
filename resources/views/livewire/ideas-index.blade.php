@@ -29,6 +29,7 @@
     </div> <!-- end filters -->
 
     <div class="ideas-container space-y-6 my-8">
+        
         @forelse ($ideas as $idea)
             <livewire:idea-index
                 :key="$idea->id"

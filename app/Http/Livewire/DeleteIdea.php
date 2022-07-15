@@ -4,8 +4,8 @@ namespace App\Http\Livewire;
 
 use App\Models\Idea;
 use App\Models\Vote;
-use Illuminate\Http\Response;
 use Livewire\Component;
+use Illuminate\Http\Response;
 
 class DeleteIdea extends Component
 {
